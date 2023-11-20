@@ -5,12 +5,14 @@ class ProductManager {
     }
 
     addProduct(title, description, price, thumbnail, code, stock) {
+        try {
 
         if (!title || !description || !price || !thumbnail || !code || !stock) {
             console.error("Hay que completar todos los campos")
         }
         if (this.products.some(product => product.code === code)) {
-            console.error("Ya hay un producto con ese code")
+            throw new Error("Ya hay un producto con ese code");
+            // console.error("Ya hay un producto con ese code")
         }
         const product = {
             id: this.nuevoId++,
@@ -21,7 +23,12 @@ class ProductManager {
             code,
             stock
         }
-        this.products.push(product)
+        this.products.push(product);
+        return true;
+    } catch (error) {
+        console.error(error.message);
+        return false;
+    }
     }
 
     getProducts() {
@@ -41,6 +48,7 @@ class ProductManager {
 
 const manager = new ProductManager()
 
+
 manager.addProduct("Milanesa", "de Soja", 2000, "https://i.ibb.co/VT9N9wN/Milanesa-Soja.jpg", "1", 24)
 manager.addProduct("Albóndiga", "de Lentejas", 1800, "https://i.ibb.co/GHYbvTR/Albondigas.jpg", "2", 12)
 manager.addProduct("Tarta", "",2500, "https://i.ibb.co/2d5sD3f/Tarta-Acelga.jpg", "3", 4)
@@ -52,5 +60,6 @@ manager.addProduct("Hamburguesa", "de Remolacha", 600, "https://i.ibb.co/3dHmdrp
 console.log(manager.getProducts())
 //lista los productos y arroja error por la descripcion inexistente y por el producto con id code repetido pero lo lista igual
 
-console.log(manager.getProductById(2))
+console.log(manager.getProductById(3))  
+//si utilizo este console.log, me llama también al objeto creado último con el id:2
 console.log(manager.getProductById(6))//arroja error por Id inexistente

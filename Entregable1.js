@@ -58,7 +58,7 @@ manager.addProduct("Hamburguesa", "de Remolacha", 600, "https://i.ibb.co/3dHmdrp
 
 
 console.log(manager.getProducts())
-//lista los productos y arroja error por la descripcion inexistente y por el producto con id code repetido pero lo lista igual
+//lista los productos y arroja error por la descripcion inexistente y por el producto con id code repetido
 
 console.log(manager.getProductById(3))  
 

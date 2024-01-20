@@ -108,15 +108,17 @@ manager.addProduct({title: "Tarta", description: "",price: 2500, thumbnail: "htt
 manager.addProduct({title: "Pizza", description: "Vegana", price: 4000, thumbnail: "https://imgs.search.brave.com/siJH1qUyw-koncJWz9guBi6pYzLTaeE0PwbXKuf8puc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aW5mb2JhZS5jb20v/bmV3LXJlc2l6ZXIv/YlJpbVdWeFU5TGpN/Sk8tQ2pxYjJyRWV2/VVVZPS9maWx0ZXJz/OmZvcm1hdCh3ZWJw/KTpxdWFsaXR5KDg1/KS9hcmMtYW5nbGVy/ZmlzaC1hcmMyLXBy/b2QtaW5mb2JhZS5z/My5hbWF6b25hd3Mu/Y29tL3B1YmxpYy9D/T08zSFE0MzJCRUVK/R1BYNEc3TkdDRE9W/NC5qcGc",code: "4", stock: 6})
 manager.addProduct({title: "Hamburguesa", description: "de Remolacha", price: 600, thumbnail: "https://i.ibb.co/3dHmdrp/Hamburguesa-De-Remolacha.jpg", code: "2", stock: 36})
 
-console.log(manager.getProducts());
+//console.log(manager.getProducts());
 //actualizo el precio
-manager.updateProduct(1, { price: 2500 });
+//manager.updateProduct(1, { price: 2500 });
 
 // console.log(manager.getProducts()); este es para listar luego de la modificación
 
-manager.deleteProduct(2);
+//manager.deleteProduct(2);
 
 // console.log(manager.getProducts());este para listar habiendo eliminado un objeto
 
 
 //por razón que desconozco no se estaba asignando los id, y lo solucioné con un parseInt
+
+console.log(manager.getProductById(1))

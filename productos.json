@@ -3,10 +3,19 @@
     "id": 1,
     "title": "Milanesa",
     "description": "de Soja",
-    "price": 2500,
+    "price": 2000,
     "thumbnail": "https://i.ibb.co/VT9N9wN/Milanesa-Soja.jpg",
     "code": "1",
     "stock": 24
+  },
+  {
+    "id": 2,
+    "title": "Albóndiga",
+    "description": "de Lentejas",
+    "price": 1800,
+    "thumbnail": "https://i.ibb.co/GHYbvTR/Albondigas.jpg",
+    "code": "2",
+    "stock": 12
   },
   {
     "id": 3,
@@ -18,4 +27,3 @@
     "stock": 6
   }
 ]
-

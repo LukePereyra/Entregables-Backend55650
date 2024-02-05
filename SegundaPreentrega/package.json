@@ -1,5 +1,5 @@
 {
-  "name": "clase15-practica-integradora",
+  "name": "segundapreentrega",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
     "mongoose": "^8.0.4",
